@@ -1,6 +1,3 @@
-# 📦 Step 1: Install Required Libraries
-!pip install diffusers transformers accelerate torch torchvision --quiet
- 
 # 📁 Step 2: Import Libraries
 import torch
 from PIL import Image
