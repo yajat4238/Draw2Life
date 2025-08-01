@@ -6,3 +6,4 @@ torchvision
 Pillow
 matplotlib
 streamlit
+gradio
