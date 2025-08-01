@@ -7,7 +7,8 @@ import matplotlib.pyplot as plt
  
 # 🧠 Step 3: Load BLIP (Image Captioning Model)
 blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
-blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base").to("cuda")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base").to(device)
  
 # 🎨 Step 4: Load Stable Diffusion
 pipe = StableDiffusionPipeline.from_pretrained(
